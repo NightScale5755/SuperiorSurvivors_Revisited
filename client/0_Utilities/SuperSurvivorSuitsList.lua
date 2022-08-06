@@ -13,38 +13,44 @@ if(isModEnabled("Brita_2")) then
     "Base.Hat_BeretArmy", -- HEAD
     "Base.Tshirt_ArmyGreen", "Base.Jacket_CoatArmy", "Brita_2.Bag_Plate_Carrier", "Brita_2.Bag_D3M", -- BODY 
     "Base.Trousers_ArmyService", -- LEGS
-    "Base.Shoes_ArmyBoots" --- FEET
+    "Base.Shoes_ArmyBoots", --- FEET
+    "Profession_Military"
   }
 	SurvivorRandomSuits["VeryRare"]["ArmyCamo"] = {
     "Brita_2.Hat_FAST_Opscore", "Brita_2.Hat_Sordin", 
     "Base.Tshirt_CamoDesert", "Base.Shirt_CamoDesert", "Base.Jacket_ArmyCamoDesert", "Brita_2.Bag_Plate_Carrier", "Brita_2.Bag_D3M", 
     "Base.Trousers_CamoDesert", 
-    "Base.Shoes_ArmyBootsDesert"
+    "Base.Shoes_ArmyBootsDesert",
+    "Profession_Military"
   }
 	SurvivorRandomSuits["VeryRare"]["MarinesCamo"] = {
     "Base.Hat_Army", "Brita_2.Hat_Helmet_Headset", 
     "Base.Tshirt_CamoGreen", "Base.Shirt_CamoGreen", "Base.Jacket_ArmyCamoGreen", "Base.Vest_BulletArmy", "Brita_2.Bag_D3M", 
     "Base.Trousers_CamoGreen", 
-    "Base.Shoes_ArmyBoots"
+    "Base.Shoes_ArmyBoots",
+    "Profession_Military"
   }
 else
 	SurvivorRandomSuits["VeryRare"]["Army"] = {
     "Base.Hat_BeretArmy", 
     "Base.Tshirt_ArmyGreen", "Base.Jacket_CoatArmy", "Base.Bag_ALICEpack", 
     "Base.Trousers_ArmyService", 
-    "Base.Shoes_ArmyBoots"
+    "Base.Shoes_ArmyBoots",
+    "Profession_Military"
   }
 	SurvivorRandomSuits["VeryRare"]["ArmyCamo"] = {
     "Base.Tshirt_CamoDesert", 
     "Base.Shirt_CamoDesert", "Base.Jacket_ArmyCamoDesert", "Base.Bag_ALICEpack", 
     "Base.Trousers_CamoDesert", 
-    "Base.Shoes_ArmyBootsDesert"
+    "Base.Shoes_ArmyBootsDesert",
+    "Profession_Military"
   }
 	SurvivorRandomSuits["VeryRare"]["MarinesCamo"] = {
     "Base.Hat_Army", 
     "Base.Tshirt_CamoGreen", "Base.Shirt_CamoGreen", "Base.Jacket_ArmyCamoGreen", "Base.Bag_ALICEpack", "Base.Vest_BulletArmy", 
     "Base.Trousers_CamoGreen", 
-    "Base.Shoes_ArmyBoots"
+    "Base.Shoes_ArmyBoots",
+    "Profession_Military"
   }
 end
 
@@ -53,7 +59,8 @@ if (isModEnabled("TWDRG")) then
     "TWDRG.Hat_Police_Sheriff", 
     "TWDRG.TShirt_Police_Sheriff", "TWDRG.Shirt_Police_Sheriff", "TWDRG.Jacket_Police_Sheriff", "TWDRG.Vest_BulletPolice_Sheriff", 
     "TWDRG.Trousers_Police_Sheriff", 
-    "Base.Shoes_BlackBoots"
+    "Base.Shoes_BlackBoots",
+	"Profession_Police"
   }
 end
 
@@ -69,7 +76,8 @@ SurvivorRandomSuits["Rare"]["Groom1M"] = {
 SurvivorRandomSuits["Rare"]["Priest1"] = {
   "Base.Shirt_Priest", 
   "Base.Trousers_Suit", 
-  "Base.Socks_Ankle", "Base.Shoes_Black"
+  "Base.Socks_Ankle", "Base.Shoes_Black",
+  "Profession_Priest"
 }
 SurvivorRandomSuits["Rare"]["ShopSpiffo1"] = {
   "Base.Tshirt_BusinessSpiffo", "Base.Apron_Spiffos",
@@ -88,7 +96,8 @@ SurvivorRandomSuits["Rare"]["Nurse1"] = {
   "Base.Hat_SurgicalMask_Blue", 
   "Base.Tshirt_Scrubs", 
   "Base.Trousers_Scrubs", 
-  "Base.Socks_Ankle", "Base.Shoes_Black"
+  "Base.Socks_Ankle", "Base.Shoes_Black",
+  "Profession_Medical"
 }
 SurvivorRandomSuits["Rare"]["Prepper1"] = {
   "Base.Hat_GasMask", 
@@ -120,19 +129,22 @@ SurvivorRandomSuits["Rare"]["Fireman1"] = {
   "Base.Hat_Fireman", 
   "Base.Jacket_Fireman", 
   "Base.Trousers_Fireman", 
-  "Base.Shoes_BlackBoots"
+  "Base.Shoes_BlackBoots",
+  "Profession_Firefighter"
 }
 SurvivorRandomSuits["Rare"]["Police1"] = {
   "Base.Hat_Police", 
-  "Shirt_PoliceBlue", "Base.Jacket_Police", 
+  "Base.Shirt_PoliceBlue", "Base.Jacket_Police", 
   "Base.Trousers_Police", 
-  "Base.Shoes_Black"
+  "Base.Shoes_Black",
+  "Profession_Police"
 }
 SurvivorRandomSuits["Rare"]["Deputy1"] = {
   "Base.Hat_Police_Grey", 
-  "Shirt_PoliceGrey", "Base.Jacket_Police", 
+  "Base.Shirt_PoliceGrey", "Base.Jacket_Police", 
   "Base.Trousers_PoliceGrey", 
-  "Base.Shoes_Black"
+  "Base.Shoes_Black",
+  "Profession_Police"
 }
 
 SurvivorRandomSuits["Normal"]["Hunter1"] = {
@@ -152,7 +164,8 @@ SurvivorRandomSuits["Normal"]["Athlete1"] = {
 SurvivorRandomSuits["Normal"]["Worker1"] = {
   "Base.Shirt_Workman", "Base.Vest_HighViz", 
   "Base.TrousersMesh_DenimLight", 
-  "Base.Socks_Ankle", "Base.Shoes_Black"
+  "Base.Socks_Ankle", "Base.Shoes_Black",
+  "Profession_Construction"
 }
 SurvivorRandomSuits["Normal"]["Student1"] = {
   "Base.Tshirt_Sport",
@@ -244,7 +257,8 @@ SurvivorRandomSuits["Preset"]["Preset_Army"] = {
   "Base.Jacket_CoatArmy",
   "Base.Trousers_ArmyService",
   "Base.Shoes_ArmyBoots",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Military"
 }
 SurvivorRandomSuits["Preset"]["Preset_Gangster"] = {
   "Base.Hat_BaseballCapGreen_Reverse",
@@ -274,7 +288,8 @@ SurvivorRandomSuits["Preset"]["Preset_MarinesCamo"] = {
   "Base.Trousers_CamoGreen",
   "Base.Shoes_ArmyBoots",
   "Base.Bag_ALICEpack",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Military"
 }
 SurvivorRandomSuits["Preset"]["Preset_ArmyCamo"] = {
   "Base.Tshirt_CamoDesert", 
@@ -285,7 +300,8 @@ SurvivorRandomSuits["Preset"]["Preset_ArmyCamo"] = {
   "Base.Trousers_CamoDesert",
   "Base.Shoes_ArmyBootsDesert",
   "Base.Bag_ALICEpack",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Military"
 }
 SurvivorRandomSuits["Preset"]["Preset_Chef"] = {
   "Base.Hat_ChefHat", 
@@ -299,21 +315,24 @@ SurvivorRandomSuits["Preset"]["Preset_Fireman"] = {
   "Base.Jacket_Fireman",
   "Base.Trousers_Fireman",
   "Base.Shoes_BlackBoots",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Firefighter"
 }
 SurvivorRandomSuits["Preset"]["Preset_Doctor"] = {
   "Base.Hat_SurgicalCap_Blue", 
   "Base.JacketLong_Doctor",
   "Base.Trousers_Scrubs",
   "Base.Shoes_Black",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Medical"
 }
 SurvivorRandomSuits["Preset"]["Preset_Police"] = {
   "Base.Hat_Police_Grey", 
   "Base.Jacket_Police",
   "Base.Trousers_PoliceGrey",
   "Base.Shoes_BlackBoots",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Police"
 }
 SurvivorRandomSuits["Preset"]["Preset_Farmer"] = {
   "Base.Boilersuit", 
@@ -325,7 +344,8 @@ SurvivorRandomSuits["Preset"]["Preset_Guard"] = {
   "Base.Shirt_PrisonGuard", 
   "Base.Trousers_PrisonGuard",
   "Base.Shoes_BlackBoots",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Police"
 }
 SurvivorRandomSuits["Preset"]["Preset_Formal"] = {
   "Base.Shirt_FormalWhite", 
@@ -363,7 +383,8 @@ SurvivorRandomSuits["Preset"]["Preset_Worker"] = {
   "Base.Shirt_Workman",
   "Base.Trousers_DefaultTEXTURE",
   "Base.Shoes_BlackBoots",
-  "Base.Belt2"
+  "Base.Belt2",
+  "Profession_Construction"
 }
 SurvivorRandomSuits["Preset"]["Preset_Inmate"] = {
   "Base.Boilersuit_Prisoner", 

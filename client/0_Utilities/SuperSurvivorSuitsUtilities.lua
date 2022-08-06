@@ -1,4 +1,5 @@
 require "0_Utilities/SuperSurvivorSuitsList"
+require "0_Utilities/SuperSurvivorAffinityList"
 -- this file has the functions for survivor's suits
 
 local enableDebugSuits = false
@@ -53,6 +54,27 @@ function getRandomSurvivorSuit(SS)
 		if(suitTable[i] ~= nil) then
 			debugSuits("WearThis: " .. tostring(suitTable[i]))
 			SS:WearThis(suitTable[i])
+			-- Profession system registry.
+			-- For defining professions.
+			-- HEAVY WIP
+			local Data = SS:getModData()
+			if suitTable[i]:contains("Profession_Police") then
+				Data.Profession = "Police"
+				--print(Data.Profession)
+			elseif suitTable[i]:contains("Profession_Military") then
+				Data.Profession = "Military"
+			elseif suitTable[i]:contains("Profession_Priest") then
+				Data.Profession = "Priest"
+			elseif suitTable[i]:contains("Profession_Firefighter") then
+				Data.Profession = "Firefighter"
+			elseif suitTable[i]:contains("Profession_Medical") then
+				Data.Profession = "Medical"
+			elseif suitTable[i]:contains("Profession_Construction") then
+				Data.Profession = "Construction"
+			-- Assign Unemployed Otherwise
+			else
+				Data.Profession = "Unemployed"
+			end
 		end
 	end
 
@@ -90,6 +112,26 @@ function setRandomSurvivorSuit(SS,tbl,name)
 			if(suitTable[i] ~= nil) then
 				debugSuits("WearThis: " .. tostring(suitTable[i]))
 				SS:WearThis(suitTable[i])
+				-- Profession system registry.
+				-- For defining professions.
+				local Data = SS:getModData()
+				if suitTable[i]:contains("Profession_Police") then
+					Data.Profession = "Police"
+				elseif suitTable[i]:contains("Profession_Military") then
+					Data.Profession = "Military"
+					print(Data.Profession)
+				elseif suitTable[i]:contains("Profession_Priest") then
+					Data.Profession = "Priest"
+				elseif suitTable[i]:contains("Profession_Firefighter") then
+					Data.Profession = "Firefighter"
+				elseif suitTable[i]:contains("Profession_Medical") then
+					Data.Profession = "Medical"
+				elseif suitTable[i]:contains("Profession_Construction") then
+					Data.Profession = "Construction"
+				-- Assign Unemployed Otherwise
+				else
+					Data.Profession = "Unemployed"
+				end
 			end
 		end
 	end

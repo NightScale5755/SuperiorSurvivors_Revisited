@@ -1,4 +1,5 @@
 require "2_Other/SuperSurvivorPresetSpawns"
+require "0_Utilities/SuperSurvivorAffinityList"
 
 SuperSurvivor = {}
 SuperSurvivor.__index = SuperSurvivor
@@ -4787,3 +4788,94 @@ function SuperSurvivor:NPC_ForceFindNearestBuilding()
 		self.TargetBuilding = self.TargetSquare:getRoom():getBuilding() 
 	end
 end
+
+-- This does stuff for Professions
+function SuperSurvivor:ProfessionAffinity()
+
+	local HP = 10
+	for i=4, SSM.SurvivorCount do
+		local SS = SSM.SuperSurvivors[i]
+
+		if SS ~= nil then
+			local Prof = SS:getModData().Profession
+
+			local SSItems = SS.player:getWornItems()
+			for j=0, SSItems:size()-1 do
+				local SSItem = SSItems:getItemByIndex(j)
+				local SSType = tostring(SSItem:getFullType())
+				local Data = SS:getModData()
+				local Damage = SS.player:getBodyDamage()
+
+				if Prof == "Police" then
+					for k=0, #SurvivorAffinity["Police"]-1 do
+						if SurvivorAffinity["Police"][k] ~= nil then
+							local Items = SurvivorAffinity["Police"][k]
+
+							if SSType == Items then
+								SuperSurvivor:DebugSay("Gave NPC Health For Affinity")
+								Damage:AddGeneralHealth(HP)
+							end
+						end
+					end
+				elseif Prof == "Military" then
+					for l=0, #SurvivorAffinity["Military"]-1 do
+						if SurvivorAffinity["Military"][l] ~= nil then
+							local Items = SurvivorAffinity["Military"][l]
+
+							if SSType == Items then
+								SuperSurvivor:DebugSay("Gave NPC Health For Affinity")
+								Damage:AddGeneralHealth(HP)
+							end
+						end
+					end
+				elseif Prof == "Priest" then
+					for m=0, #SurvivorAffinity["Priest"]-1 do
+						if SurvivorAffinity["Priest"][m] ~= nil then
+							local Items = SurvivorAffinity["Priest"][m]
+
+							if SSType == Items then
+								SuperSurvivor:DebugSay("Gave NPC Health For Affinity")
+								Damage:AddGeneralHealth(HP)
+							end
+						end
+					end
+				elseif Prof == "Firefighter" then
+					for n=0, #SurvivorAffinity["Firefighter"]-1 do
+						if SurvivorAffinity["Firefighter"][n] ~= nil then
+							local Items = SurvivorAffinity["Firefighter"][n]
+
+							if SSType == Items then
+								SuperSurvivor:DebugSay("Gave NPC Health For Affinity")
+								Damage:AddGeneralHealth(HP)
+							end
+						end
+					end
+				elseif Prof == "Medical" then
+					for o=0, #SurvivorAffinity["Medical"]-1 do
+						if SurvivorAffinity["Medical"][o] ~= nil then
+							local Items = SurvivorAffinity["Medical"][o]
+
+							if SSType == Items then
+								SuperSurvivor:DebugSay("Gave NPC Health For Affinity")
+								Damage:AddGeneralHealth(HP)
+							end
+						end
+					end
+				elseif Prof == "Construction" then
+					for p=0, #SurvivorAffinity["Construction"]-1 do
+						if SurvivorAffinity["Construction"][p] ~= nil then
+							local Items = SurvivorAffinity["Construction"][p]
+
+							if SSType == Items then
+								SuperSurvivor:DebugSay("Gave NPC Health For Affinity")
+								Damage:AddGeneralHealth(HP)
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+Events.EveryHours.Add(SuperSurvivor.ProfessionAffinity)
